@@ -130,6 +130,75 @@
             margin-top: 20px;
         }
     </style>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio de Noticias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+    .search-bar input[type="text"] {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .search-bar button {
+      padding: 10px 15px;
+      margin-left: 5px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .search-bar button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sitio de Noticias</h1>
+  </header>
+
+  <!-- Barra de búsqueda -->
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Buscar noticias...">
+    <button onclick="buscar()">Buscar</button>
+  </div>
+
+  <!-- Resultados -->
+  <div id="results">
+    <p>Aquí se mostrarán los resultados de tu búsqueda.</p>
+  </div>
+
+  <script>
+    function buscar() {
+      const input = document.getElementById("search-input").value.toLowerCase();
+      const results = document.getElementById("results");
+
+      // Aquí podrías implementar tu lógica para filtrar artículos.
+      if (input === "") {
+        results.innerHTML = "<p>Por favor, escribe algo para buscar.</p>";
+      } else {
+        results.innerHTML = `<p>Resultados para: <strong>${input}</strong></p>`;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
 </head>
 <body>
     <!-- Encabezado con el logo y la barra de navegación -->
