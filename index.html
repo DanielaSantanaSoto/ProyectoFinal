@@ -132,39 +132,7 @@
     </style>
     <!-- Barra de búsqueda -->
 
-<body>
 
-  <header>
-    <h1>Sitio de Noticias</h1>
-  </header>
-
-  <!-- Barra de búsqueda -->
-  <div class="search-bar">
-    <input type="text" id="search-input" placeholder="Buscar noticias...">
-    <button onclick="buscar()">Buscar</button>
-  </div>
-
-  <!-- Resultados -->
-  <div id="results">
-    <p>Aquí se mostrarán los resultados de tu búsqueda.</p>
-  </div>
-
-  <script>
-    function buscar() {
-      const input = document.getElementById("search-input").value.toLowerCase();
-      const results = document.getElementById("results");
-
-      // Aquí podrías implementar tu lógica para filtrar artículos.
-      if (input === "") {
-        results.innerHTML = "<p>Por favor, escribe algo para buscar.</p>";
-      } else {
-        results.innerHTML = `<p>Resultados para: <strong>${input}</strong></p>`;
-      }
-    }
-  </script>
-
-</body>
-</html>
 
 </head>
 <body>
